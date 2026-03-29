@@ -25,6 +25,7 @@ import { ToastProvider } from '../contexts/ToastContext';
 import ServiceWorkerRegistrar from '../components/ServiceWorkerRegistrar';
 import ErrorBoundary from '../components/error/ErrorBoundary';
 import PerformanceMonitor from '../components/performance/PerformanceMonitor';
+import BackToTop from '../components/ui/BackToTop';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
 
         {/* Core Web Vitals monitoring — renders nothing to DOM */}
         <PerformanceMonitor />
+        <BackToTop />
         <ServiceWorkerRegistrar />
       </body>
     </html>
